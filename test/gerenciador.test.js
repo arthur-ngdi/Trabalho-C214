@@ -1,5 +1,5 @@
 const { expect } = require("chai")
-const {TaskManagement} = require("../src/GerenciadorDeTarefas")
+const {TaskManagement} = require("../src/Task")
 
 describe("Gerenciador de tarefas", ()=>{
 
