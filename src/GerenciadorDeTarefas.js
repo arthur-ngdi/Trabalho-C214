@@ -1,44 +1,44 @@
 let readlineSync = require('readline-sync');
 
-class TaskManagement  { 
+class TaskManagement {
 
     constructor() {
         this.taskList = []
     }
-    addNewTask(title, description){
+    addNewTask(title, description) {
 
         this.taskList.push({
             title,
             description,
-            status:"A fazer"
+            status: "A fazer"
         })
 
     }
 
-    getList(){
+    getList() {
         return this.taskList
     }
 
     showAttributes() {
-        this.taskList.forEach((task)=>{
+        this.taskList.forEach((task) => {
             console.log(`Titulo: ${task.title}, \nDescrição: ${task.description}, \nStatus: ${task.status}`)
             console.log("\n")
         })
     }
 
     updateStatus(title, status) {
-        this.taskList.forEach((task)=>{
-            if(task.title === title){
+        this.taskList.forEach((task) => {
+            if (task.title === title) {
                 task.status = status
             }
         })
     }
 
-    removeTask(title){
+    removeTask(title) {
         console.log(this.taskList)
         this.taskList = this.taskList.filter((task) => {
             return task.title !== title
-          })
+        })
 
     }
 
@@ -46,55 +46,55 @@ class TaskManagement  {
 
 const taskManagement = new TaskManagement()
 
-    readlineSync.promptCLLoop({
-        a: (title, description) => {
 
-            taskManagement.addNewTask(title, description)
+readlineSync.promptCLLoop({
+    a: (title, description) => {
 
-            console.log('a - Adicionar nova tarefa')
-            console.log('b - Visualizar a lista de tarefas')
-            console.log('c - Atualizar o status da tarefa')
-            console.log('d - Excluir tarefa')
-            console.log('e - Sair')
+        taskManagement.addNewTask(title, description)
 
-        },
-        b: () => {
+        console.log('a - Adicionar nova tarefa')
+        console.log('b - Visualizar a lista de tarefas')
+        console.log('c - Atualizar o status da tarefa')
+        console.log('d - Excluir tarefa')
+        console.log('e - Sair')
 
-            taskManagement.showAttributes()
+    },
+    b: () => {
 
-            console.log('a - Adicionar nova tarefa')
-            console.log('b - Visualizar a lista de tarefas')
-            console.log('c - Atualizar o status da tarefa')
-            console.log('d - Excluir tarefa')
-            console.log('e - Sair')
+        taskManagement.showAttributes()
 
-        },
-        c: (title, status) => {
+        console.log('a - Adicionar nova tarefa')
+        console.log('b - Visualizar a lista de tarefas')
+        console.log('c - Atualizar o status da tarefa')
+        console.log('d - Excluir tarefa')
+        console.log('e - Sair')
 
-            taskManagement.updateStatus(title, status)
-            
+    },
+    c: (title, status) => {
 
-            console.log('a - Adicionar nova tarefa')
-            console.log('b - Visualizar a lista de tarefas')
-            console.log('c - Atualizar o status da tarefa')
-            console.log('d - Excluir tarefa')
-            console.log('e - Sair')
+        taskManagement.updateStatus(title, status)
 
-        },
-        d: (title) => {
 
-           taskManagement.removeTask(title)
+        console.log('a - Adicionar nova tarefa')
+        console.log('b - Visualizar a lista de tarefas')
+        console.log('c - Atualizar o status da tarefa')
+        console.log('d - Excluir tarefa')
+        console.log('e - Sair')
 
-            console.log('a - Adicionar nova tarefa')
-            console.log('b - Visualizar a lista de tarefas')
-            console.log('c - Atualizar o status da tarefa')
-            console.log('d - Excluir tarefa')
-            console.log('e - Sair')
+    },
+    d: (title) => {
 
-        },
-        e: () => {return true }
-    })
+        taskManagement.removeTask(title)
 
+        console.log('a - Adicionar nova tarefa')
+        console.log('b - Visualizar a lista de tarefas')
+        console.log('c - Atualizar o status da tarefa')
+        console.log('d - Excluir tarefa')
+        console.log('e - Sair')
+
+    },
+    e: () => { return true }
+})
 
 
 
