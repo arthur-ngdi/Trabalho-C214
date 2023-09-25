@@ -29,7 +29,10 @@ describe("Gerenciador de tarefas", ()=>{
 
     it("should remove a task", () => {
         const taskManagement = new TaskManagement();
-    
+        
+        taskManagement.addNewTask("Teste1", "Fazer teste");
+        expect(taskManagement.getList()[0].title).to.equal("Teste1")
+
         taskManagement.removeTask("Teste1");
     
         const taskList = taskManagement.getList();
