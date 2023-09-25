@@ -1,4 +1,8 @@
-# Catálogo de Filmes
+# Primeiro Trabalho do Laboratório de C214
+
+Feito por: Amanda Silva Guimarães, Arthur Ferreira Silva, Manuela Gripp Silva e Maria Luiza Silva Raimundo.
+
+## Gerenciador de Tarefas
 
 Essa pequena aplicação node que possibilita ao usuário cadastrar suas tarefas, atualizá-las, excluí-las e. Isso tudo é feito através do CLI.
 
