@@ -27,6 +27,16 @@ describe("Gerenciador de tarefas", ()=>{
         expect(capturedOutput).to.include("Status: A fazer");
     });
 
+    it("should update the task attributes", () => {
+        const taskManagement = new TaskManagement();
+
+        taskManagement.addNewTask("Teste_update", "Fazer Teste")
+        
+        taskManagement.updateStatus("Teste_update", "Feito");
+        expect(taskManagement.getList()[0].status).to.equal("Feito")
+        
+    });
+
     it("should remove a task", () => {
         const taskManagement = new TaskManagement();
     
@@ -48,4 +58,6 @@ describe("Gerenciador de tarefas", ()=>{
         console.log = originalConsoleLog;
         return output;
     }
+
+    
 })
