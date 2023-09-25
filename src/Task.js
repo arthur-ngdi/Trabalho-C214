@@ -19,6 +19,7 @@ class TaskManagement {
 
     showAttributes() {
         this.taskList.forEach((task) => {
+            console.log("\n")
             console.log(`Titulo: ${task.title}, \nDescrição: ${task.description}, \nStatus: ${task.status}`)
             console.log("\n")
         })
@@ -33,7 +34,6 @@ class TaskManagement {
     }
 
     removeTask(title) {
-        console.log(this.taskList)
         this.taskList = this.taskList.filter((task) => {
             return task.title !== title
         })

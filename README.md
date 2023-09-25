@@ -21,7 +21,7 @@ Foi utilizada a biblioteca `readline-sync` para possibilitar a interação do us
 no diretório src
 
 ```bash
-  node GerenciadorDeTarefas.js
+  npm run start GerenciadorDeTarefas.js
 ```
 
 Segue o modelo para cada opção:
@@ -33,10 +33,10 @@ Segue o modelo para cada opção:
 - e Sair
 
 ```javascript
-> a Estudar C214 "Estudar testes unitários da matéria de engenharia de software"
+> a Estudar "Estudar testes unitários da matéria de engenharia de software"
 > b
-> c Estudar C214 "feito"
-> d Estudar C214
+> c Estudar "feito"
+> d Estudar
 > e
 ```
 ## Test
