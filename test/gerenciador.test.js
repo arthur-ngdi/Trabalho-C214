@@ -27,6 +27,17 @@ describe("Gerenciador de tarefas", ()=>{
         expect(capturedOutput).to.include("Status: A fazer");
     });
 
+    it("should remove a task", () => {
+        const taskManagement = new TaskManagement();
+    
+        taskManagement.removeTask("Teste1");
+    
+        const taskList = taskManagement.getList();
+        const taskTitles = taskList.map(task => task.title);
+    
+        expect(taskTitles).to.not.include("Teste1"); 
+      })
+
     function captureConsoleOutput(callback) {
         const originalConsoleLog = console.log;
         let output = '';
