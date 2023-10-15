@@ -1,4 +1,6 @@
+[![CI Class](https://github.com/arthur-ngdi/Trabalho-C214/actions/workflows/node.js.yml/badge.svg)](https://github.com/arthur-ngdi/Trabalho-C214/actions/workflows/node.js.yml)
 # Primeiro Trabalho do Laboratório de C214
+
 
 Feito por: Amanda Silva Guimarães, Arthur Ferreira Silva, Manuela Gripp Silva e Maria Luiza Silva Raimundo.
 
